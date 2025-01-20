@@ -1,0 +1,277 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 70px;
+    display: flexbox;
+    justify-content: center;
+}
+
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(54, 54, 54);
+    z-index: 1000;
+    border-radius: 20px;
+    width: 30%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; 
+}
+
+main a, nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+main a:hover, nav a:hover {
+    color: rgb(59, 130, 246);
+    text-decoration: underline;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; 
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(54, 54, 54);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .nav-links {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Header styles */
+#resume {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 0;
+    margin-top: 100px;
+}
+
+h4 {
+    text-align: center;
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+
+
+section {
+    display: flexbox;
+    margin-bottom: 20px;
+}
+
+section h3 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 80px;
+ 
+}
+
+
+section article {
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+article h4 {
+    font-size: 1em;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: left;
+
+}
+
+article h5 {
+    font-size: 1em;
+    color: #777;
+    margin-top: 10px;
+}
+
+article ul {
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+article ul li {
+    margin-bottom: 5px;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+main {
+    display: flex;
+    gap: 20px; 
+    margin: 0 auto; 
+    max-width: 1200px; 
+    padding: 0 20px; 
+}
+
+.left-column, .right-column {
+    min-width: 300px;
+}
+
+
+
+.left-column {
+    flex: 2; 
+    padding-right: 10px;
+}
+
+
+.right-column {
+    flex: 1; 
+    padding-left: 10px;
+    margin-top: 179px;
+}
+
+
+.right-column ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.right-column ul li {
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.interests-list {
+    display: flex; 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    gap: 15px; 
+    justify-content: center; 
+}
+
+.interests-list li {
+    font-size: 24px;
+    color: #333; 
+}
+
+
+.interests-list li:hover {
+    color: #007bff; 
+    cursor: pointer; 
+}
+
+
+.other-contact ul {
+    list-style: none; 
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+}
+
+.other-contact ul li {
+    display: inline-block; 
+}
+
+.other-contact a {
+    text-decoration: none; 
+    color: black; 
+    font-size: 1.5rem; 
+    transition: color 0.3s, transform 0.3s; 
+}
+
+.other-contact a:hover {
+    color: rgb(59, 130, 246); 
+    transform: scale(1.2); 
+}
+
+.other-contact a i {
+    margin-right: 5px; 
+}
+
+
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column; 
+    }
+
+    .left-column, .right-column {
+        min-width: 100%; 
+        margin-top: 20px;
+    }
+
+   
+    .right-column {
+        margin-top: 0;
+    }
+}
+
+

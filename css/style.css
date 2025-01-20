@@ -1,0 +1,453 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    background-color: rgb(54, 54, 54);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 60px;
+}
+
+main {
+    min-height: 100vh; 
+    padding-bottom: 60px; 
+}
+
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(54, 54, 54);
+    z-index: 1000;
+    border-radius: 20px;
+    width: 30%;
+}
+
+main a, nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+main a:hover, nav a:hover {
+    color: rgb(59, 130, 246);
+    text-decoration: underline;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; 
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(54, 54, 54);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+    }
+
+    .me, .tech-article {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .nav-links {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
+.montevideo img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.montevideo-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.montevideo-text h1 {
+    font-size: 3rem;
+    margin-top: 0%;
+}
+
+.montevideo-text h3 {
+    font-size: 2rem;
+}
+
+.montevideo-text h4 {
+    font-size: 1.5rem;
+}
+
+.copyright {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(45, 45, 45);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    z-index: 9999;
+}
+
+.me {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5% auto;
+    padding: 20px;
+    background-color: rgb(45, 45, 45);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+    color: white;
+}
+
+.me img {
+    width: 25%;
+    height: auto;
+    clip-path: circle(50% at center);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.me .text {
+    width: 60%;
+    padding-left: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.me .text h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: rgb(59, 130, 246);
+}
+
+.me .text p {
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: rgb(59, 130, 246);
+    text-align: center;
+    margin-top: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    padding-top: 80px;
+}
+
+.articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.tech-article {
+    background-color: #454545;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.tech-article:hover {
+    transform: scale(1.05);
+}
+
+.tech-article h2 {
+    font-size: 1.5rem;
+    color: rgb(59, 130, 246);
+    margin-bottom: 10px;
+}
+
+.tech-article p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.article-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.article-icons i {
+    font-size: 1.8rem;
+    color: rgb(59, 130, 246);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.article-icons i:hover {
+    transform: scale(1.2);
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .tech-article {
+        width: 100%;
+    }
+
+    .filter-container {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .filter-container label {
+        font-size: 1rem;
+        margin-right: 10px;
+    }
+
+    #filter-select {
+        font-size: 1rem;
+        padding: 8px;
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+.filter-container {
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+}
+
+.filter-container label {
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+#filter-select {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.contact-section {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: rgb(45, 45, 45);
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    color: rgb(59, 130, 246);
+    padding-top: 20px;
+}
+
+.contact-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: rgb(200, 200, 200);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    text-align: left;
+    font-size: 1rem;
+    color: rgb(200, 200, 200);
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    max-width: 700px;
+    padding: 12px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    background-color: rgb(60, 60, 60);
+    color: white;
+    font-size: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+.language-options {
+    text-align: left;
+    border: none;
+    padding: 10px;
+    color: white;
+}
+
+.language-options legend {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.language-options label {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 1rem;
+    color: rgb(200, 200, 200);
+}
+
+.language-options input[type="radio"] {
+    margin-right: 5px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(59, 130, 246);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.submit-btn:hover {
+    background-color: rgb(37, 99, 235);
+    transform: scale(1.05);
+}
+
+.submit-btn:focus {
+    outline: none;
+    border: 2px solid rgb(59, 130, 246);
+}
+
+.other-contact {
+    margin-top: 20px; 
+    font-size: 16px;
+    text-align: center; 
+}
+
+.other-contact h3 {
+    font-size: 1.2rem; 
+    margin-bottom: 10px;
+    color: rgb(200, 200, 200); 
+}
+
+.other-contact ul {
+    list-style: none; 
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+}
+
+.other-contact ul li {
+    display: inline-block; 
+}
+
+.other-contact a {
+    text-decoration: none; 
+    color: white; 
+    font-size: 1.5rem; 
+    transition: color 0.3s, transform 0.3s; 
+}
+
+.other-contact a:hover {
+    color: rgb(59, 130, 246); 
+    transform: scale(1.2); 
+}
+
+.other-contact a i {
+    margin-right: 5px; 
+}
