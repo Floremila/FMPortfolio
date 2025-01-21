@@ -273,8 +273,8 @@ main {
 }
 
 :root {
-    --fa-animation-delay: 0s; /* Valor predeterminado válido */
-    --fa-rotate-angle: 0deg; /* Valor predeterminado válido */
+    --fa-animation-delay: 0s; 
+    --fa-rotate-angle: 0deg; 
 }
 
 
@@ -295,6 +295,6 @@ main {
 }
 
 .fa-rotate-by {
-    transform: rotate(0deg); /* Valor por defecto directo */
+    transform: none; 
 }
 
