@@ -133,8 +133,8 @@ nav {
 }
 
 .image-caption {
-    font-size: 1rem; /* Escalable para diferentes tamaños de pantalla */
-    color: #555; /* Color suave para el texto */
+    font-size: 1rem; 
+    color: #555;
     margin-top: 0.5rem;
     margin-left: 0.5rem;;
 }
@@ -142,7 +142,7 @@ nav {
 
 @media (max-width: 480px) {
     .image-caption {
-        font-size: 0.8rem; /* Texto más pequeño para pantallas pequeñas */
+        font-size: 0.8rem; 
     }
 }
 
@@ -206,16 +206,10 @@ nav {
         padding: 10px;
     }
 
-
-   {
     .me img {
         width: 40%; 
         margin-bottom: 15px;
-        max-width: 150px;
-        border-radius: 50%;
-        object-fit: cover;
     }
-
 
     .me .text {
         width: 100%; 
