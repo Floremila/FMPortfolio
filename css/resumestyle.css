@@ -276,7 +276,7 @@ main {
     --fa-animation-delay: 0s; /* Valor predeterminado válido */
     --fa-rotate-angle: 0deg; /* Valor predeterminado válido */
 }
-}
+
 
 .fa-beat {
     animation-delay: var(--fa-animation-delay, 0s);
