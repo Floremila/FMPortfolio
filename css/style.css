@@ -132,6 +132,20 @@ nav {
     font-size: 1.5rem;
 }
 
+.image-caption {
+    font-size: 1rem; /* Escalable para diferentes tamaños de pantalla */
+    color: #555; /* Color suave para el texto */
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;;
+}
+
+
+@media (max-width: 480px) {
+    .image-caption {
+        font-size: 0.8rem; /* Texto más pequeño para pantallas pequeñas */
+    }
+}
+
 .copyright {
     position: fixed;
     bottom: 0;
