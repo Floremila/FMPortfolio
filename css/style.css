@@ -206,10 +206,16 @@ nav {
         padding: 10px;
     }
 
+
+   {
     .me img {
         width: 40%; 
         margin-bottom: 15px;
+        max-width: 150px;
+        border-radius: 50%;
+        object-fit: cover;
     }
+
 
     .me .text {
         width: 100%; 
