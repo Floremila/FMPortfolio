@@ -86,7 +86,7 @@ nav {
         background-color: white;
     }
 
-    .me, .tech-article {
+    .tech-article {
         flex-direction: column;
         text-align: center;
         width: 100%;
