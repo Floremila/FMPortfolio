@@ -232,15 +232,26 @@ nav {
 }
 
 @media (min-width: 1024px) {
+    .me {
+        padding: 40px; /* Mayor espacio interno */
+        gap: 50px; /* Más espacio entre imagen y texto */
+    }
+
     .me img {
-        margin-left: 30px;
-        margin-top: 120px;
+        width: 200px; /* Imagen más grande */
+        height: 200px; /* Imagen más grande */
     }
 
     .me .text {
-        width: 80%;
-        padding-left: 0px;
-        margin: 0 auto;
+        max-width: 500px; /* Limita el ancho del texto */
+    }
+
+    .me .text h3 {
+        font-size: 2.2rem; /* Título más grande */
+    }
+
+    .me .text p {
+        font-size: 1rem; /* Ajusta el tamaño del texto */
     }
 }
 
