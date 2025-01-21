@@ -232,27 +232,17 @@ nav {
 }
 
 @media (min-width: 1024px) {
-    .me {
-        padding: 40px; /* Mayor espacio interno */
-        gap: 50px; /* Más espacio entre imagen y texto */
-    }
 
     .me img {
-        width: 200px; /* Imagen más grande */
-        height: 200px; /* Imagen más grande */
+       margin-left: 30px;
+        margin-top: 120px;
     }
 
     .me .text {
-        max-width: 500px; /* Limita el ancho del texto */
+        max-width: 80%
     }
 
-    .me .text h3 {
-        font-size: 2.2rem; /* Título más grande */
-    }
 
-    .me .text p {
-        font-size: 1rem; /* Ajusta el tamaño del texto */
-    }
 }
 
 .section-title {
