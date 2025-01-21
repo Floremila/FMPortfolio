@@ -26,8 +26,16 @@
 
         <div class="me">
             <img 
-            src="bilder/1640865443029.jpeg"
-            alt="Photo of Florencia Mendez" id="profile-img"/>
+            src="/bilder/responsive_480.jpeg" 
+            srcset="
+                /bilder/responsive_320.jpeg 320w,
+                /bilder/responsive_480.jpeg 480w,
+                /bilder/responsive_768.jpeg 768w,
+                /bilder/responsive_1024.jpeg 1024w,
+            " 
+            sizes="(max-width: 768px) 40%, 
+                   (min-width: 769px) 25%" 
+            alt="Florencia's picture">
             <section class="text">
                 <h3>About Me</h3>
                 <p>I am currently in my second semester of studies in Java Development at STI. Throughout my coursework, I have gained valuable knowledge in Java, databases, and the basics of web development. As I delve deeper into these technologies, I am eager to expand my skills and explore more advanced areas of programming.</p>
