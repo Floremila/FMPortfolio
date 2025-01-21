@@ -295,6 +295,6 @@ main {
 }
 
 .fa-rotate-by {
-    transform: none; 
+    transform: none !important;
 }
 
