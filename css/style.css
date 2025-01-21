@@ -159,10 +159,11 @@ nav {
     z-index: 9999;
 }
 
+/* Estilo principal */
 .me {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Distribuye el contenido */
     margin: 5% auto;
     padding: 20px;
     background-color: rgb(45, 45, 45);
@@ -170,21 +171,25 @@ nav {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     max-width: 900px;
     color: white;
+    gap: 20px; /* Espaciado entre imagen y texto */
 }
 
 .me img {
-    width: 25%;
-    height: auto;
+    width: 150px; /* Tamaño fijo para mantener la proporción */
+    height: 150px; /* Tamaño fijo */
     clip-path: circle(50% at center);
+    border-radius: 50%; /* Fallback para navegadores que no soportan clip-path */
+    object-fit: cover; /* Asegura que la imagen no se deforme */
     transition: transform 0.3s ease;
     cursor: pointer;
 }
 
 .me .text {
-    width: 60%;
+    flex: 1; /* Ocupa el espacio restante */
     padding-left: 20px;
     font-size: 1rem;
     line-height: 1.6;
+    max-width: 600px; /* Limita el ancho del texto */
 }
 
 .me .text h3 {
@@ -197,44 +202,54 @@ nav {
     margin-bottom: 15px;
 }
 
-
+/* Estilos responsivos para pantallas pequeñas */
 @media (max-width: 768px) {
     .me {
-        flex-direction: column; 
-        align-items: center;
-        text-align: center; 
-        padding: 10px;
+        flex-direction: column; /* Cambia a columna */
+        align-items: center; /* Centra todo */
+        text-align: center; /* Centra el texto */
+        padding: 15px;
     }
 
     .me img {
-        width: 40%; 
-        margin-bottom: 15px;
+        width: 120px; /* Ajusta el tamaño de la imagen */
+        height: 120px; /* Mantén proporción */
+        margin-bottom: 15px; /* Espacio debajo de la imagen */
     }
 
     .me .text {
-        width: 100%; 
-        padding-left: 0; 
+        width: 100%; /* El texto ocupa todo el ancho */
+        padding-left: 0; /* Sin espacio lateral */
     }
 
     .me .text h3 {
-        font-size: 1.5rem; 
+        font-size: 1.5rem; /* Ajusta el tamaño del título */
     }
 
     .me .text p {
-        font-size: 0.9rem; 
+        font-size: 0.9rem; /* Ajusta el tamaño del párrafo */
     }
 }
 
+/* Estilos para pantallas grandes */
 @media (min-width: 1024px) {
-    .me .text {
-        width: 80%; 
-        padding-left: 0px; 
-        margin: 0 auto; 
+    .me {
+        padding: 30px; /* Mayor espacio interno */
+        gap: 40px; /* Más separación entre elementos */
     }
 
     .me img {
-        margin-left: 10px;
-        margin-top: 200px;
+        width: 180px; /* Tamaño más grande en pantallas grandes */
+        height: 180px;
+    }
+
+    .me .text {
+        max-width: 500px; /* Limita el ancho del texto */
+        padding-left: 20px; /* Espacio adecuado */
+    }
+
+    .me .text h3 {
+        font-size: 2.2rem; /* Título más grande */
     }
 }
 
